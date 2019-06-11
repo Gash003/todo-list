@@ -1,7 +1,6 @@
 $(document).ready(function () {
     // Control variables
     let todoItems = [];
-    let completedTodoItems = [];
     const inputCtrl = createInputController($("#todo-list__action-input"));
 
     // Load initial data
@@ -12,9 +11,6 @@ $(document).ready(function () {
         );
         $("#all-items-container").append(
             createTodoHTMLPartial(todoItems)
-        );
-        $("#completed-items-container").append(
-            createTodoHTMLPartial(completedTodoItems)
         );
     });
 
