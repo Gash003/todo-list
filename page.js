@@ -14,7 +14,7 @@ $(document).ready(function () {
         );
     });
 
-    // Setup button click() event
+    // Setup button click() event!
     $("#todo-list__action-btn").click(function () {
         const itemText = inputCtrl.getText();
         todoItems = addTodoItem(itemText, todoItems);
