@@ -1,24 +1,17 @@
 $(document).ready(function () {
     // Control variables
     let todoItems = [];
-    let completedTodoItems = [];
     const inputCtrl = createInputController($("#todo-list__action-input"));
 
     // Load initial data
     getJsonContent("data/data.json").then(data => {
         todoItems = data;
-        completedTodoItems = data.filter(
-            element => element.completed === true
-        );
         $("#all-items-container").append(
             createTodoHTMLPartial(todoItems)
         );
-        $("#completed-items-container").append(
-            createTodoHTMLPartial(completedTodoItems)
-        );
     });
 
-    // Setup button click() event
+    // Setup button click() event!
     $("#todo-list__action-btn").click(function () {
         const itemText = inputCtrl.getText();
         todoItems = addTodoItem(itemText, todoItems);
