@@ -6,9 +6,6 @@ $(document).ready(function () {
     // Load initial data
     getJsonContent("data/data.json").then(data => {
         todoItems = data;
-        completedTodoItems = data.filter(
-            element => element.completed === true
-        );
         $("#all-items-container").append(
             createTodoHTMLPartial(todoItems)
         );
