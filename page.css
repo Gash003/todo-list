@@ -1,0 +1,13 @@
+.navbar-title {
+    display: flex;
+    align-items: center;
+}
+
+.nav__icon {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.todo-list__container {
+    justify-content: center;
+}
